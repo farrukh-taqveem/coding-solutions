@@ -11,5 +11,19 @@ def arrayManipulation(n, queries):
         s += result[i]
         if (s > m):
             m = s
-    
     return m
+    
+#https://binarysearch.com/problems/List-Min-Replacement
+def solve(nums):
+    if len(nums) == 0:
+        return []
+        
+    m = nums[0]
+    
+    for i in range(1, len(nums)):
+        temp = nums[i]
+        nums[i] = m
+        if(temp < m):
+            m = temp
+    nums[0] = 0
+    return nums
