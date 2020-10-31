@@ -1,5 +1,4 @@
 #https://www.hackerrank.com/challenges/crush/problem
-
 def arrayManipulation(n, queries):
     result = [0] * (n+2)
     for q in queries:
@@ -27,3 +26,24 @@ def solve(nums):
             m = temp
     nums[0] = 0
     return nums
+    
+#https://binarysearch.com/problems/Pigeonhole
+def solve(self, ar):
+    l = len(ar)
+    a = sum(ar) - l*(l-1)/2
+    return a
+    
+#https://binarysearch.com/problems/FizzBuzz
+def solve(self, n):
+    a = 3
+    b = 5
+    c = 15
+    res = [str(i) for i in range(1,n+1)]
+    l = len(res)
+    for i in range(a-1, l, a):
+        res[i] = 'Fizz'
+    for i in range(b-1, l, b):
+        res[i] = 'Buzz'
+    for i in range(c-1, l, c):
+        res[i] = 'FizzBuzz'
+    return res

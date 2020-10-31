@@ -1,5 +1,4 @@
 #https://www.hackerrank.com/challenges/balanced-brackets/problem
-
 def isBalanced(s):
     mat = []
     def isPair(left, right):
@@ -29,7 +28,6 @@ def isBalanced(s):
     return "NO"
     
 #https://www.hackerrank.com/challenges/game-of-two-stacks/problem
-
 def twoStacks(x, a, b):
     sum_a = sum_b = count = i = j = k = 0
     for item in a:
