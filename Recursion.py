@@ -5,3 +5,4 @@ def rec (num, d=0):
         return d
     s = rec(num//10, num%10)
     return s+d
+

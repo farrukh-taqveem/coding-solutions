@@ -47,3 +47,21 @@ def solve(self, n):
     for i in range(c-1, l, c):
         res[i] = 'FizzBuzz'
     return res
+    
+#Cake Order Checker - Interview Cake
+def cake_order_checker(delivery_ord, dine_ord, served_ord):
+    del_idx = 0
+    dine_idx = 0
+    del_len = len(delivery_ord)
+    dine_len = len(dine_ord)
+    for order in served_ord:
+        if del_idx < del_len and delivery_ord[del_idx] == order:
+            del_idx += 1
+        elif dine_idx < dine_len and dine_ord[dine_idx] == order:
+            dine_idx += 1
+        else:
+            return False
+
+    if del_idx != del_len or dine_idx != dine_len:
+        return False
+    return True
