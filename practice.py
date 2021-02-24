@@ -8,18 +8,6 @@ def word_break(str, dict):
                 return True
     return False
 
-def longest_valid_paranthesis(str):
-    l = len(str)
-    dp = [0]*len(str)
-    for i in range(l):
-        if str[i] == '(':
-            dp[i] = 0
-        elif str[i-1] == '(':
-            dp[i] = dp[i-2] + 2
-        elif str[i - dp[i-1] - 1] == '(':
-            dp[i] = dp[i-1] + 2 + dp[i - (dp[i-1] + 2)]
-    return dp[l - 1]
-
 def all_palindromes(str):
     l = len(str)
     results = []

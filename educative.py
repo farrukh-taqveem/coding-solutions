@@ -52,22 +52,6 @@ def search_triplets(arr):
         q -= 1
 
   return triplets
-  
-  
-#https://binarysearch.com/problems/Kth-Last-Node-of-a-Linked-List
-def solve(self, node, k):
-    slow = node
-    fast = node
-    
-    for i in range(k+1):
-        fast = fast.next
-    while fast:
-        slow = slow.next
-        fast = fast.next
-        
-    return slow.val
-  
-
 
 def zero_sub_array(arr):
   d = {}
